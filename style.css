@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b79fad;
+}
+
+.card {
+  width: 60rem;
+  height: 45rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: -4px 7px 47px -7px rgba(0, 0, 0, 0.75);
+  background-image: url("./fire.jpg");
+  background-color: blue;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.header-t {
+  color: rgba(255, 255, 255, 0.499);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 9rem;
+  z-index: 10;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 2s;
+}
+
+.ice-t {
+  opacity: 0;
+  text-transform: capitalize;
+}
+
+.image {
+  width: 5rem;
+  height: 25rem;
+  background-image: url("./ice.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  opacity: 0.5;
+
+  transition: all 2s;
+}
+
+.card:hover .image {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover .ice-t {
+  opacity: 1;
+}
+
+.card:hover .fire-t {
+  opacity: 0;
+}
